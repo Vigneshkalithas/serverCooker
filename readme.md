@@ -23,6 +23,18 @@ PUT URL AND PORT NUMBER IN DOTENV
 
 
 create model and creat one file enter all schemas
+and export that
+
+create routes folder
+
+const router = express.Router();
+
+export default router;
+
+in index.js
+export that router to and import
+import recipeRoutes from "./routes/recipe.router.js";
+app.use("/recipe",recipeRoutes)
 
 
 

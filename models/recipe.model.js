@@ -29,6 +29,10 @@ const recipeSchema = new mongoose.Schema({
         required:true,
         
     },
+    recipeType:{
+        type:String,
+        required:true
+    },
     about:{
         type:String,
         required:true
