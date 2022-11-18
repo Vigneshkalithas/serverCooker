@@ -1,5 +1,13 @@
 import express from "express";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+
+dotenv.config()
+
 const app = express();
+app.use(express.json())
+
+await mongoose.connect(process.env.MONGO_URL)
 
 app.get("/",(req,res)=>{
     res.send("hello world")
