@@ -22,6 +22,7 @@ install dot env
 PUT URL AND PORT NUMBER IN DOTENV
 
 
+create model and creat one file enter all schemas
 
 
 
