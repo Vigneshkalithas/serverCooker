@@ -40,4 +40,6 @@ app.use("/recipe",recipeRoutes)
 <!-- MONGO_URL="mongodb+srv://vignesh:admin123@cluster0.ov4eq.mongodb.net/?retryWrites=true&w=majority/cooker" -->
 <!-- PORT=4000 -->
 
+if you push your projet to github add .env to gitignore and untrack the env file that p ushing time. 
+
 
