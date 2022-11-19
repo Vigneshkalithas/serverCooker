@@ -37,4 +37,7 @@ import recipeRoutes from "./routes/recipe.router.js";
 app.use("/recipe",recipeRoutes)
 
 
+<!-- MONGO_URL="mongodb+srv://vignesh:admin123@cluster0.ov4eq.mongodb.net/?retryWrites=true&w=majority/cooker" -->
+<!-- PORT=4000 -->
+
 
