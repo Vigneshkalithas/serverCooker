@@ -2,11 +2,17 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import recipeRoutes from "./routes/recipe.router.js";
+import cors from "cors"
 
 dotenv.config()
 
 const app = express();
-app.use(express.json())
+app.use(express.json()) 
+
+app.use(cors({
+    orgin : "*"
+}));
+
 
 await mongoose.connect(process.env.MONGO_URL)
 

@@ -42,4 +42,31 @@ app.use("/recipe",recipeRoutes)
 
 if you push your projet to github add .env to gitignore and untrack the env file that p ushing time. 
 
+we deploy node app with vercel app, so we some small vercel config is there.
+creat new file vercel.json and 
+enter the below config 
+```js
+{
+    "builds": [
+      {
+        "src": "./index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.js"
+      }
+    ]
+  }
+  ```
+  then added package.json 
+  added 
+  "engines" : {
+    "node":"14.x"
+  },
+  undedr the line"type:"modules"
 
+
+then push to github and deploy in vercel app finally config the environment variable
