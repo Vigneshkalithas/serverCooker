@@ -6,7 +6,7 @@ import {Sessions} from '../models/session.model.js'
 const Signup = async(req, res) => {
     const { username, password, role } = req.body;
     const salt = await bcrypt.genSalt(10);
-    const hash = await bcrypt.hash(req.body.password, salt);
+    const hash = await bcrypt.hash(password, salt);
     const userData = { username, password: hash, role };
     const user = new Users(userData);
     const token = jwt.sign({ _id: user._id + Date.now() }, process.env.SECRET);
