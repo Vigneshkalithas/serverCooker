@@ -19,6 +19,12 @@ const Signup = async(req, res) => {
 
 
 
+  const getUsers = async (req, res) => {
+    const user = await Users.find();
+    res.status(200).send(user);
+};
+
+
 
   
   const Login = async (req, res) => {
@@ -38,4 +44,4 @@ const Signup = async(req, res) => {
     });
   };;
 
-export { Signup , Login };
+export { Signup , Login ,  getUsers};
