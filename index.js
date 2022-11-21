@@ -25,6 +25,8 @@ app.get("/",(req,res)=>{
 app.use("/recipe",recipeRoutes)
 app.use("/user" , usersRoutes)
 
+// alknkhajd cmbkjccgcbv
+
 const PORT = 4000 || process.env.PORT;
 app.listen(PORT, ()=>{
     console.log("listning on port " + PORT)
