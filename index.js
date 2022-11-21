@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json()) 
 
 app.use(cors({
-    orgin : "*"
+    orgin : "https://beamish-pavlova-50ad58.netlify.app/"
 }));
 
 
