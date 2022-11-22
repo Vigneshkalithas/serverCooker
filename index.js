@@ -11,9 +11,7 @@ dotenv.config()
 const app = express();
 app.use(express.json()) 
 
-app.use(cors({
-    orgin : "https://beamish-pavlova-50ad58.netlify.app/"
-}));
+app.use(cors());
 
 
 await mongoose.connect(process.env.MONGO_URL)
