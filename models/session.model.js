@@ -9,6 +9,10 @@ const sessionSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-});
+  expired:{
+    type:Boolean,
+    default:false,
+  }
+},{timestamps : true});
 
 export const Sessions = mongoose.model("Session", sessionSchema);
