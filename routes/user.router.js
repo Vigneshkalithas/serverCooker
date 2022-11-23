@@ -6,6 +6,8 @@ import {
   getUsers,
   Auth,
   ForgetPassword,
+  Verify,
+  Changepassword,
 } from "../controllers/user.controller.js";
 
 const router = express.Router();
@@ -16,5 +18,7 @@ router.post("/login", Login);
 router.post("/logout", Logout);
 router.post("/auth", Auth);
 router.post("/forgetpassword", ForgetPassword);
+router.post("/verify-token", Verify);
+router.patch("/changepassword/:id", Changepassword);
 
 export default router;
