@@ -9,7 +9,7 @@ const authorizeAdmin = async (req, res, next) => {
     if (decodedToken) {
       const session = await Sessions.findOne({ token: userToken });
       const user = await Users.findById(session.userId);
-      if (user.role == "Admin") {
+      if (user.role == "admin") {
         next();
       } else {
         return res.status(401).send({ message: "Not Authorized" });
@@ -27,7 +27,7 @@ const authorizeUser = async (req, res, next) => {
     if (decodedToken) {
       const session = await Sessions.findOne({ token: userToken });
       const user = await Users.findById(session.userId);
-      if (user.role == "Admin" || user.role == "Normal") {
+      if (user.role == "admin" || user.role == "user") {
         next();
       } else {
         return res.status(401).send({ message: "Not Authorized" });
